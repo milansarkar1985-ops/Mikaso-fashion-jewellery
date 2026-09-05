@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mikaso — Fashion Jewellery</title>
+<meta name="description" content="Mikaso Fashion Jewellery — stylish jewellery at special prices. Order easily on WhatsApp.">
+<style>
+:root{
+  --pink:#e92d88;--purple:#6338d7;--blue:#159ed8;--ink:#211b32;
+  --muted:#716b7d;--soft:#fff6fb;--line:#eee7f0;--green:#20c968;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
+a{text-decoration:none;color:inherit}
+.container{max-width:1180px;margin:auto;padding:0 22px}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(238,231,240,.9)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{height:58px;width:auto;display:block}
+.navlinks{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:700}
+.navlinks a:hover{color:var(--pink)}
+.navcta{background:linear-gradient(100deg,var(--pink),var(--purple),var(--blue));color:#fff;padding:12px 19px;border-radius:999px;font-weight:800;box-shadow:0 8px 22px rgba(99,56,215,.18)}
+
+/* Hero */
+.hero{overflow:hidden;background:
+ radial-gradient(circle at 80% 15%,rgba(233,45,136,.20),transparent 28%),
+ radial-gradient(circle at 92% 70%,rgba(21,158,216,.18),transparent 25%),
+ linear-gradient(135deg,#fff8fc 0%,#f8f3ff 58%,#effaff 100%)}
+.hero-inner{min-height:600px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:55px;padding-top:35px;padding-bottom:55px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border:1px solid #f0d5e6;border-radius:999px;background:#fff;font-size:12px;font-weight:900;letter-spacing:1.4px;text-transform:uppercase;color:#9c3a72}
+.hero h1{font-size:clamp(48px,6.2vw,76px);line-height:.98;margin:18px 0 20px;letter-spacing:-3px}
+.gradient{background:linear-gradient(90deg,var(--pink),var(--purple),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:18px;line-height:1.75;color:var(--muted);max-width:575px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:14px 22px;font-weight:850;border:1px solid var(--line)}
+.btn.primary{border:0;color:#fff;background:linear-gradient(100deg,var(--pink),var(--purple),var(--blue));box-shadow:0 12px 25px rgba(99,56,215,.20)}
+.btn.light{background:#fff}
+.hero-card{background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.9);border-radius:38px;padding:30px;box-shadow:0 30px 70px rgba(67,37,97,.13);text-align:center}
+.hero-card img{max-width:88%;max-height:330px;object-fit:contain;border-radius:24px}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.trust div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:13px 8px;font-size:12px;font-weight:800}
+
+/* Sections */
+section{padding:76px 0}
+.section-head{text-align:center;margin-bottom:34px}
+.section-head .mini{font-size:12px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;color:var(--pink)}
+.section-head h2{font-size:40px;letter-spacing:-1.4px;margin:8px 0}
+.section-head p{margin:0;color:var(--muted)}
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cat{padding:27px 15px;text-align:center;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,#fff,#fff8fc);font-size:17px;font-weight:850;transition:.2s}
+.cat:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(40,25,60,.08)}
+.cat span{display:block;font-size:28px;margin-bottom:8px}
+
+/* Products */
+#shop{background:#fff}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:26px;box-shadow:0 9px 28px rgba(35,24,48,.06);transition:.22s}
+.product:hover{transform:translateY(-5px);box-shadow:0 18px 42px rgba(35,24,48,.11)}
+.product-img{height:310px;background:#faf7fb;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.product-img img{width:100%;height:100%;object-fit:cover;display:block;transition:.35s}
+.product:hover .product-img img{transform:scale(1.035)}
+.badge{position:absolute;top:14px;left:14px;z-index:2;background:#fff;color:#d51e74;border-radius:999px;padding:8px 11px;font-size:11px;font-weight:900;box-shadow:0 6px 16px #00000012}
+.product-body{padding:18px 18px 20px}
+.product h3{font-size:18px;margin:0 0 9px;line-height:1.3}
+.price{font-size:21px;font-weight:900;margin-bottom:15px}
+.price s{color:#999;font-size:14px;font-weight:600}
+.off{color:#d51e74;font-size:12px;font-weight:900}
+.wa{width:100%;color:#fff;background:var(--green);border:0;padding:13px 18px}
+.wa:hover{background:#18b85b}
+
+/* Offer */
+.offer-wrap{padding-top:0}
+.offer{border-radius:32px;padding:48px 30px;text-align:center;background:
+ radial-gradient(circle at 10% 20%,rgba(233,45,136,.18),transparent 25%),
+ linear-gradient(110deg,#fff1f8,#f1edff,#e9f9ff);border:1px solid #f1e5f0}
+.offer h2{font-size:39px;margin:0 0 10px;letter-spacing:-1px}
+.offer p{color:var(--muted);font-size:17px;margin:0 auto 24px;max-width:600px}
+
+/* Contact/Footer */
+.contact{background:#faf8fc}
+.contact-box{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:28px 30px;border:1px solid var(--line);border-radius:26px;background:#fff}
+.contact-box h3{margin:0 0 6px;font-size:23px}.contact-box p{margin:0;color:var(--muted)}
+footer{background:#171328;color:#fff;padding:42px 0}
+.footer{display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap}
+.footer-logo{height:62px;background:#fff;border-radius:14px;padding:5px}
+.footer small{color:#bdb7c9}.socials{display:flex;gap:10px;flex-wrap:wrap}.socials a{display:inline-flex;align-items:center;gap:7px;padding:10px 13px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#fff;font-size:13px;font-weight:800}.socials a:hover{background:rgba(255,255,255,.08)}
+
+/* Floating WhatsApp */
+.float-wa{position:fixed;right:20px;bottom:20px;z-index:40;width:58px;height:58px;border-radius:50%;background:#20c968;color:#fff;display:flex;align-items:center;justify-content:center;font-size:27px;font-weight:900;box-shadow:0 12px 28px rgba(32,201,104,.32)}
+
+/* Responsive */
+@media(max-width:900px){
+ .navlinks{display:none}.hero-inner{grid-template-columns:1fr;padding-top:50px}
+ .hero-card{max-width:600px;margin:auto}.categories{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+ .container{padding:0 15px}.nav{height:68px}.logo{height:51px}
+ .hero h1{font-size:47px;letter-spacing:-2px}.hero p{font-size:16px}.hero-inner{min-height:auto}
+ .trust{grid-template-columns:1fr}.categories,.products{grid-template-columns:1fr}
+ .product-img{height:330px}.section-head h2{font-size:32px}.contact-box{align-items:flex-start;flex-direction:column}
+ .offer{padding:36px 18px}.offer h2{font-size:30px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a href="#"><img class="logo" src="mikaso-logo.jpg" alt="Mikaso"></a>
+    <nav class="navlinks">
+      <a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#offers">Offers</a><a href="#contact">Contact</a><a href="https://www.facebook.com/share/19aNf7aXjA/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/fashionjewelary_mikaso?igsh=MTA0cm80ZWswNW8xNA==" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <a class="navcta" href="#shop">Shop Now</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <span class="eyebrow">✨ Mikaso Fashion Jewellery</span>
+      <h1>Every look deserves a little <span class="gradient">shine.</span></h1>
+      <p>Elegant, trendy and affordable fashion jewellery for everyday style, parties and special occasions.</p>
+      <div class="actions">
+        <a class="btn primary" href="#shop">Explore Collection →</a>
+        <a class="btn light" href="#offers">View Offers</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="mikaso-logo.jpg" alt="Mikaso Fashion Jewellery">
+      <div class="trust">
+        <div>💎 Stylish Designs</div><div>🏷️ Special Prices</div><div>💬 WhatsApp Order</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="categories">
+  <div class="container">
+    <div class="section-head"><div class="mini">Explore</div><h2>Shop by Category</h2><p>Pick a style and discover your next favourite piece.</p></div>
+    <div class="categories">
+      <div class="cat"><span>✨</span>Necklaces</div><div class="cat"><span>💎</span>Earrings</div>
+      <div class="cat"><span>💍</span>Rings</div><div class="cat"><span>🌸</span>Bracelets & Bangles</div>
+    </div>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="container">
+    <div class="section-head"><div class="mini">Mikaso Collection</div><h2>Featured Jewellery</h2><p>Limited-time 40% discount on selected pieces.</p></div>
+    <div class="products">
+
+      <article class="product"><span class="badge">40% OFF</span><div class="product-img"><img src="product1.jpg" alt="Pearl Necklace Set"></div><div class="product-body"><h3>Pearl Necklace Set</h3><div class="price"><s>₹299</s> &nbsp;₹179.40 <span class="off">40% OFF</span></div><a class="btn wa" target="_blank" href="https://wa.me/919062931022?text=Hello%20Mikaso%2C%20I%20want%20to%20order%20Pearl%20Necklace%20Set.%20Price%3A%20%E2%82%B9179.40%20(40%25%20OFF).">Order on WhatsApp</a></div></article>
+
+      <article class="product"><span class="badge">40% OFF</span><div class="product-img"><img src="product2.jpg" alt="Green Stone Long Earrings"></div><div class="product-body"><h3>Green Stone Long Earrings</h3><div class="price"><s>₹199</s> &nbsp;₹119.40 <span class="off">40% OFF</span></div><a class="btn wa" target="_blank" href="https://wa.me/919062931022?text=Hello%20Mikaso%2C%20I%20want%20to%20order%20Green%20Stone%20Long%20Earrings.%20Price%3A%20%E2%82%B9119.40%20(40%25%20OFF).">Order on WhatsApp</a></div></article>
+
+      <article class="product"><span class="badge">40% OFF</span><div class="product-img"><img src="product3.jpg" alt="Crystal Drop Fashion Earrings"></div><div class="product-body"><h3>Crystal Drop Fashion Earrings</h3><div class="price"><s>₹299</s> &nbsp;₹179.40 <span class="off">40% OFF</span></div><a class="btn wa" target="_blank" href="https://wa.me/919062931022?text=Hello%20Mikaso%2C%20I%20want%20to%20order%20Crystal%20Drop%20Fashion%20Earrings.%20Price%3A%20%E2%82%B9179.40%20(40%25%20OFF).">Order on WhatsApp</a></div></article>
+
+      <article class="product"><span class="badge">40% OFF</span><div class="product-img"><img src="product4.jpg" alt="Red Crystal Necklace Set"></div><div class="product-body"><h3>Red Crystal Necklace Set</h3><div class="price"><s>₹299</s> &nbsp;₹179.40 <span class="off">40% OFF</span></div><a class="btn wa" target="_blank" href="https://wa.me/919062931022?text=Hello%20Mikaso%2C%20I%20want%20to%20order%20Red%20Crystal%20Necklace%20Set.%20Price%3A%20%E2%82%B9179.40%20(40%25%20OFF).">Order on WhatsApp</a></div></article>
+
+      <article class="product"><span class="badge">40% OFF</span><div class="product-img"><img src="product5.jpg" alt="Pink Pearl Crystal Drop Earrings"></div><div class="product-body"><h3>Pink Pearl Crystal Drop Earrings</h3><div class="price"><s>₹199</s> &nbsp;₹119.40 <span class="off">40% OFF</span></div><a class="btn wa" target="_blank" href="https://wa.me/919062931022?text=Hello%20Mikaso%2C%20I%20want%20to%20order%20Pink%20Pearl%20Crystal%20Drop%20Earrings.%20Price%3A%20%E2%82%B9119.40%20(40%25%20OFF).">Order on WhatsApp</a></div></article>
+
+      <article class="product"><span class="badge">40% OFF</span><div class="product-img"><img src="product6.jpg" alt="Multicolor Enamel Gold-Tone Bangles"></div><div class="product-body"><h3>Multicolor Enamel Gold-Tone Bangles</h3><div class="price"><s>₹499</s> &nbsp;₹299.40 <span class="off">40% OFF</span></div><a class="btn wa" target="_blank" href="https://wa.me/919062931022?text=Hello%20Mikaso%2C%20I%20want%20to%20order%20Multicolor%20Enamel%20Gold-Tone%20Bangles.%20Price%3A%20%E2%82%B9299.40%20(40%25%20OFF).">Order on WhatsApp</a></div></article>
+
+      <article class="product"><span class="badge">40% OFF</span><div class="product-img"><img src="product7.webp" alt="Pearl Layered Necklace Set"></div><div class="product-body"><h3>Pearl Layered Necklace Set</h3><div class="price"><s>₹499</s> &nbsp;₹299.40 <span class="off">40% OFF</span></div><a class="btn wa" target="_blank" href="https://wa.me/919062931022?text=Hello%20Mikaso%2C%20I%20want%20to%20order%20Pearl%20Layered%20Necklace%20Set.%20Price%3A%20%E2%82%B9299.40%20(40%25%20OFF).">Order on WhatsApp</a></div></article>
+
+    </div>
+  </div>
+</section>
+
+<section id="offers" class="offer-wrap">
+  <div class="container">
+    <div class="offer">
+      <h2>✨ 40% OFF — Shop Your Favourites</h2>
+      <p>Choose your favourite Mikaso jewellery and place your order directly on WhatsApp.</p>
+      <a class="btn primary" href="#shop">Shop Discounted Products</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-box">
+      <div><h3>Ready to order?</h3><p>Message Mikaso on WhatsApp: <strong>9062931022</strong></p></div>
+      <a class="btn wa" style="width:auto" target="_blank" href="https://wa.me/919062931022?text=Hello%20Mikaso%2C%20I%20want%20to%20know%20more%20about%20your%20jewellery%20collection.">💬 Chat on WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <img class="footer-logo" src="mikaso-logo.jpg" alt="Mikaso logo">
+    <div class="socials"><a href="https://www.facebook.com/share/19aNf7aXjA/" target="_blank" rel="noopener">📘 Facebook</a><a href="https://www.instagram.com/fashionjewelary_mikaso?igsh=MTA0cm80ZWswNW8xNA==" target="_blank" rel="noopener">📸 Instagram</a><a href="https://wa.me/919062931022?text=Hello%20Mikaso%2C%20I%20want%20to%20order%20jewellery." target="_blank" rel="noopener">💬 WhatsApp</a></div>
+    <small>© Mikaso Fashion Jewellery • WhatsApp Orders: 9062931022</small>
+  </div>
+</footer>
+
+<a class="float-wa" target="_blank" aria-label="WhatsApp" href="https://wa.me/919062931022?text=Hello%20Mikaso%2C%20I%20want%20to%20order%20jewellery.">☏</a>
+</body>
+</html>
